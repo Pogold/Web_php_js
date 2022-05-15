@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href = "style_mixer.xsl" ?>
+<mixer_catalog>
+
+   <mixer>
+   <name>QSC Touchmix-8</name>
+   <price>150 525 p</price>
+   <description>Цифровой сенсорный микшер 8 микр./лин. входов, 2 стерео входа, 4 эффекта, 4 AUX</description>
+   <pic>images/xml_table/mix/touchmix8.jpg</pic>   
+   </mixer>
+
+   <mixer>
+   <name>QSC Touchmix-16</name>
+   <price>201 040 p</price>
+   <description>Цифровой сенсорный микшер 16 микр./лин. входов, 2 стерео входа, 4 эффекта, 6 моно  AUX, 2 стерео AUX</description>
+   <pic>images/xml_table/mix/touchmix16.jpg</pic> 
+   </mixer>
+
+   <mixer>
+   <name>PEAVEY Unity DR 16</name>
+   <price>24 990 p</price>
+   <description>16-канальный цифровой микшерный пульт</description>
+   <pic>images/xml_table/mix/PEAVEY.jpg</pic>
+   </mixer>
+
+   <mixer>
+   <name>SOUNDCRAFT Ui-12</name>
+   <price>29 990 p</price>
+   <description>Рэковый цифровой микшер</description>
+   <pic>images/xml_table/mix/SOUNDCRAFT Ui-12.jpg</pic>
+   </mixer>
+
+   <mixer><name>BEHRINGER XR12</name>       
+   <price>49 440 p</price>
+   <description>Цифровой рэковый микшер для iPad/Android</description>
+   <pic>images/xml_table/mix/BEHRINGER XR12.jpg</pic>
+   </mixer>
+
+   <mixer><name>SOUNDCRAFT Ui-16</name>       
+   <price>50 530 p</price>
+   <description>Рэковый цифровой микшер</description>
+   <pic>images/xml_table/mix/SOUNDCRAFT Ui-16.jpg</pic>
+   </mixer>
+
+   <mixer><name>MACKIE DL1608</name>       
+   <price>58 000 p</price>
+   <description>16-канальный цифровой аудио микшер с управлением через iPad</description>
+   <pic>images/xml_table/mix/MACKIE DL1608.jpg</pic>
+   </mixer>
+
+   <mixer><name>BEHRINGER XR16</name>       
+   <price>60 260 p</price>
+   <description>Цифровой рэковый микшер для iPad/Android</description>
+   <pic>images/xml_table/mix/BEHRINGER XR16.jpg</pic>
+   </mixer>
+
+   <mixer><name>BEHRINGER X18</name>       
+   <price>67 990 p</price>
+   <description>Компактный цифровой микшер для iPad и планшетов</description>
+   <pic>images/xml_table/mix/BEHRINGER X18.jpg</pic>
+   </mixer>
+
+   <mixer><name>SOUNDCRAFT Ui-24R</name>       
+   <price>80 990 p</price>
+   <description>24-канальный рэковый цифровой микшер</description>
+   <pic>images/xml_table/mix/SOUNDCRAFT Ui-24R.jpg</pic>
+   </mixer>
+
+</mixer_catalog>

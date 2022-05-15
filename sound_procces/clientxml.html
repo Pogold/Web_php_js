@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <title>Zvuko-обработка</title>
+   <link rel="shortcut icon" href="images/icon/icon.ico" type="image/x-ico">
+   <link rel="stylesheet" href="styles/navigation.css">
+   <script>
+      function loadXMLDoc(filename) {
+         if (window.ActiveXObject) {
+            xhttp = new ActiveXObject("Msxml2.XMLHTTP");
+         }
+         else { xhttp = new XMLHttpRequest(); }
+         xhttp.open("GET", filename, false);
+         try { xhttp.responseType = "msxml-document" } catch (err) { } // Helping IE11
+         xhttp.send("");
+         return xhttp.responseXML;
+      }
+
+      function displayResult() {
+
+         xml = loadXMLDoc("xml/mixer.xml");
+         xsl = loadXMLDoc("xml/style_mixer.xsl");
+
+         xml1 = loadXMLDoc("xml/processors.xml");
+         xsl1 = loadXMLDoc("xml/style_processors.xsl");
+
+         // код для IE
+         if (window.ActiveXObject || xhttp.responseType == "msxml-document") {
+            ex = xml.transformNode(xsl);
+            document.getElementById("mixers").innerHTML = ex;
+
+             ex1 = xml.transformNode(xsl1);
+            document.getElementById("processors").innerHTML = ex1;
+         }
+         // код для Chrome, Firefox, Opera и др.
+         else if (document.implementation && document.implementation.createDocument) {
+            xsltProcessor = new XSLTProcessor();
+            xsltProcessor.importStylesheet(xsl);
+            resultDocument = xsltProcessor.transformToFragment(xml, document);
+            document.getElementById("mixers").appendChild(resultDocument);
+
+            xsltProcessor1 = new XSLTProcessor();
+            xsltProcessor1.importStylesheet(xsl1);
+            resultDocument1 = xsltProcessor1.transformToFragment(xml1, document);
+            document.getElementById("processors").appendChild(resultDocument1);
+         }
+
+      }
+   </script>
+</head>
+
+<body onload="displayResult()">
+
+      <header>
+         <div class="menu">
+            <ul>
+               <li><img src="images/icon/icon.ico" alt="Icon" /></li>
+               <li>
+                  <p>Zvuko-обработка</p>
+               </li>
+               <li><a href="index.html">Главная</a></li>
+               <li><a href="sound.html">Что такое звук</a></li>
+               <li><a href="sound-process.html">Обработка звука</a></li>
+               <li><a href="clock.html">Часы</a></li>
+               <li><a href="db.php">База</a></li>
+               <li><a href="chat.php">Сообщения</a></li>
+               <li><a href="clientxml.html">XML</a></li>
+               <li><a href="sources.html">Источники</a></li>
+            </ul>
+         </div>
+      </header>
+
+   <h3>Микшеры цифровые</h3>
+   <div id="mixers"></div>
+<br><br>
+   <h3>Процессоры эффектов</h3>
+   <div id="processors"></div>
+
+   <br>
+   <div id="foot">Site made by Andrew Pogoldin</div>
+</body>
+</html>

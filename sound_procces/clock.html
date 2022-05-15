@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Zvuko-обработка</title>
+    <link rel="shortcut icon" href="images/icon/icon.ico" type="image/x-ico" />
+    <link rel="stylesheet" href="styles/navigation.css" />
+    <!--внешняя таблица стилей-->
+
+    <script type="text/javascript">
+
+       setInterval(funonload, 900);
+       var time = "";
+      ///clock///
+      function funonload() {
+        let datecur, hour, minute;
+
+        datecur = new Date();
+        hour = datecur.getHours();
+        minute = datecur.getMinutes();
+
+       
+        time = (hour < 10 ? "0" : "") + hour;
+        time += (minute < 10 ? ":0" : ":") + minute;
+        document.getElementsByTagName("span")[0].innerText = time;
+      }
+
+    
+
+      function bigben() {
+        var datecur, sec;
+
+        datecur = new Date();
+        sec = datecur.getSeconds();
+
+        sec = (sec < 10 ? ":0" : ":") + sec;
+
+        document.getElementsByTagName("span")[1].innerText = sec;
+      }
+
+      ///fio///
+      function alerted() {
+        document.getElementById("author").style =
+          "background-color:" +
+          "#" +
+          (Math.random().toString(16) + "000000")
+            .substring(2, 8)
+            .toUpperCase() +
+          "; " +
+          "height:" +
+          Math.random() * 200 +
+          "px;" +
+          "width:" +
+          Math.random() * 200 +
+          "px;";
+        alert("Автор сайта: Погольдин Андрей Максимович Группа 4933");
+      }
+
+      function createMatrix(obj) {
+        // создание матрицы
+        var res = "",
+          sizen = document.getElementById("sizen"),
+          sizem = document.getElementById("sizem"),
+          n = sizen.options[sizen.selectedIndex].value,
+          m = sizem.options[sizem.selectedIndex].value;
+
+        for (var i = 0; i < n; i++) {
+          for (var j = 0; j < m; j++) {
+            res +=
+              '<input style="width: 40px;" type="text" id="a' +
+              (i + 1) +
+              (j + 1) +
+              '" />';
+          }
+          res += "<br/>";
+        }
+        document.getElementById(obj).innerHTML = res;
+      }
+
+      function PrintMatrix() {
+        var A = [],
+          B = [],
+          sizen = document.getElementById("sizen"),
+          sizem = document.getElementById("sizem"),
+          N = sizen.options[sizen.selectedIndex].value,
+          M = sizem.options[sizem.selectedIndex].value,
+          counter = 0;
+
+        for (let i = 0; i < N; i++) {
+          A[i] = [];
+
+          for (let j = 0; j < M; j++) {
+            if (document.getElementById("a" + (i + 1) + (j + 1)).value < 0)
+              counter++;
+
+            A[i][j] = document.getElementById("a" + (i + 1) + (j + 1)).value;
+          }
+
+          if (counter > 3) for (j = 0; j < M; j++) A[i][j] = " ";
+
+          counter = 0;
+        }
+
+        console.log(A);
+
+        var res = "";
+        for (var i = 0; i < A.length; ++i)
+          res += "&nbsp;&nbsp" + A[i].join(" ") + "<br />";
+
+        document.getElementById("matrix2").innerHTML = res;
+      }
+
+
+      
+    </script>
+  </head>
+  <body onload="funonload();">
+    <header>
+      <div class="menu">
+        <ul>
+          <li><img src="images/icon/icon.ico" alt="Icon" /></li>
+          <li><p>Zvuko-обработка</p></li>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="sound.html">Что такое звук</a></li>
+          <li><a href="sound-process.html">Обработка звука</a></li>
+          <li><a href="clock.html">Часы</a></li>
+          <li><a href="db.php">База</a></li>
+          <li><a href="chat.php">Сообщения</a></li>
+          <li><a href="clientxml.html">XML</a></li>
+          <li><a href="sources.html">Источники</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <h3>Время на данный момент: <span></span><span></span></h3>
+    <button class="but" onclick="bigben()">Показать время</button>
+    <br />
+    <br />
+    <h3>Таблица с удалением/добавлением строк</h3>
+    <form>
+      <div class="input-row">
+        <label for="url">URL: </label><br />
+        <input type="text" name="url" id="url" />
+      </div>
+      <div class="input-row">
+        <label for="website">Website Name: </label><br />
+        <input type="text" name="website" id="website" />
+      </div>
+      <br />
+      <button class="but">Add</button>
+    </form>
+
+    <br />
+
+    <div class="lab4">
+      <table>
+        <thead>
+          <tr>
+            <th>URL</th>
+            <th>Website</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <script>
+      const formEl = document.querySelector("form");
+      const tbodyEl = document.querySelector("tbody");
+      const tableEl = document.querySelector("table");
+      function onAddWebsite(e) {
+        e.preventDefault();
+        const website = document.getElementById("website").value;
+        const url = document.getElementById("url").value;
+        tbodyEl.innerHTML += `
+            <tr>
+                <td>${url}</td>
+                <td>${website}</td>
+                <td style="width:40px"><button class="deleteBtn">Delete</button></td>
+            </tr>
+        `;
+      }
+
+      function onDeleteRow(e) {
+        if (!e.target.classList.contains("deleteBtn")) {
+          return;
+        }
+
+        const btn = e.target;
+        btn.closest("tr").remove();
+      }
+
+      formEl.addEventListener("submit", onAddWebsite);
+      tableEl.addEventListener("click", onDeleteRow);
+    </script>
+
+    <br />
+    <h3>Функция Матрица</h3>
+    <p>Убирает строки в которых более 3 отрицательных элементов.</p>
+
+    <div class="lab4">
+      <table>
+        <tr>
+          <td>Задайте размеры матрицы</td>
+          <td>
+            <select id="sizen">
+              <option selected="selected" value="4">4</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+            </select>
+            <select id="sizem">
+              <option selected="selected" value="4">4</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+            </select>
+          </td>
+          <td>
+            <button onclick="createMatrix('matrix1')">Создать матрицу</button>
+          </td>
+          <td><button onclick="PrintMatrix()">Вычислить</button></td>
+        </tr>
+
+        <tr></tr>
+        <tr style="height: 125px">
+          <td id="matrix1" colspan="2"></td>
+          <td id="matrix2" colspan="2"></td>
+        </tr>
+      </table>
+    </div>
+
+    <br />
+    <br />
+    <h3>Изменение цвета и размера кнопки Автор</h3>
+
+    <br />
+    <button class="but" type="submit" id="author" onclick="alerted();">
+      Автор
+    </button>
+    <br />
+    <br />
+    <div id="foot">Site made by Andrew Pogoldin</div>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+   <cd>
+     <pic>images/xml_table/proc/TC HELICON VoiceTone H1.jpg</pic>
+     <title>TC HELICON VoiceTone H1</title>
+     <price>16 680 р</price>
+     <desc>Напольная вокальная педаль эффекта интелектуальной гармонизации</desc>
+   </cd>
+
+   <cd>
+     <pic>images/xml_table/proc/TC HELICON VoiceTone D1.jpg</pic>
+     <title>TC HELICON VoiceTone D1</title>
+     <price>16 680 р</price>
+     <desc>Напольная вокальная педаль эффекта дублирования голоса</desc>
+   </cd>
+
+   <cd>
+     <pic>images/xml_table/proc/TC HELICON VoiceTone T1.jpg</pic>
+     <title>TC HELICON VoiceTone T1</title>
+     <price>16 680 р</price>
+     <desc>Напольная вокальная педаль эффектов</desc>
+   </cd>
+
+    <cd>
+     <pic>images/xml_table/proc/TC HELICON VoiceTone X1.jpg</pic>
+     <title>TC HELICON VoiceTone X1</title>
+     <price>16 680 р</price>
+     <desc>Напольная вокальная педаль эффекта искажения и фильтрации</desc>
+   </cd>
+
+    <cd>
+     <pic>images/xml_table/proc/TC HELICON DITTO MIC LOOPER.jpg</pic>
+     <title>TC HELICON DITTO MIC LOOPER</title>
+     <price>16 680 р</price>
+     <desc>Напольная вокальная педаль эффектов, лупер</desc>
+   </cd>
+
+    <cd>
+     <pic>images/xml_table/proc/TC HELICON VoiceTone R1.jpg</pic>
+     <title>TC HELICON VoiceTone R1</title>
+     <price>18 770 р</price>
+     <desc>Напольная вокальная педаль эффекта реверберации</desc>
+   </cd>
+
+    <cd>
+     <pic>images/xml_table/proc/TC HELICON VoiceTone E1.jpg</pic>
+     <title>TC HELICON VoiceTone E1</title>
+     <price>19 465 р</price>
+     <desc>Напольная вокальная педаль эффектов эхо и задержки</desc>
+   </cd>
+
+    <cd>
+     <pic>images/xml_table/proc/TC HELICON DUPLICATOR.jpg</pic>
+     <title>TC HELICON DUPLICATOR</title>
+     <price>21 550 р</price>
+     <desc>Педаль эффектов для вокала - корректор, реверберация, дабл-трек</desc>
+   </cd>
+
+    <cd>
+     <pic>images/xml_table/proc/KORG KAOSS PAD KP3+.jpg</pic>
+     <title>KORG KAOSS PAD KP3+</title>
+     <price>21 550 р</price>
+     <desc>Процессор эффектов</desc>
+   </cd>
+
+   <cd>
+     <pic>images/xml_table/proc/ZOOM V6.jpg</pic>
+     <title>ZOOM V6</title>
+     <price>53 315 р</price>
+     <desc>Вокальный процессор</desc>
+   </cd>
+
+</catalog>
