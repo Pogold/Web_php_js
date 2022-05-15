@@ -1,0 +1,180 @@
+body {
+  background-color: #dcdcdc;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 5mm; /*в миллиметрах*/
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+  margin-left: 300px;
+  margin-right: 300px;
+  text-align: left;
+  overflow-wrap: normal;
+  line-break: auto;
+  hyphens: manual;
+}
+
+.input-row {
+  margin-left: 300px;
+  margin-right: 300px;
+  text-align: left;
+}
+
+.but {
+  margin-left: 300px;
+  margin-right: 300px;
+  text-align: center;
+  width: 120px;
+  height: 30px;
+  padding: 0;
+}
+
+#foot {
+  margin-left: 300px;
+  margin-right: 300px;
+  text-align: left;
+  overflow-wrap: normal;
+  line-break: auto;
+  hyphens: manual;
+}
+
+.pic img {
+  margin-left: 300px;
+  margin-right: 300px;
+}
+
+.default ul {
+  margin-left: 300px;
+  margin-right: 300px;
+  text-align: left;
+}
+
+.lnk a:link {
+  /* псевдоселекторы*/
+  color: #3643bd; /* Цвет ссылок */
+  text-decoration: none;
+}
+
+.lnk a:visited {
+  color: #919192; /* Цвет посещенных ссылок */
+  text-decoration: none;
+}
+
+/*menu style*/
+.menu img {
+  border: none;
+  margin-left: 100px;
+  margin-right: 10px;
+  width: 700;
+  height: 400;
+}
+
+.menu li p {
+  display: block;
+  color: white; /*через слово*/
+  text-align: left;
+  padding: 2px 2px;
+  text-decoration: none;
+  margin-left: 10px;
+  margin-right: 100px;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.menu li {
+  float: left;
+}
+
+.menu li a {
+  display: block;
+  color: rgb(255, 255, 255); /*десятичное указание цвета*/
+  text-align: center;
+  padding: 24px 16px; /*пиксели*/
+  text-decoration: none;
+}
+
+.menu li a:hover {
+  background-color: #111; /*шестнадцатеричное указание цвета*/
+}
+.environment table,
+thead,
+th,
+tbody,
+tr,
+td {
+  margin-left: 300px;
+  margin-right: 300px;
+  border: 2px solid rgb(0, 0, 0);
+}
+
+.lab4 table,
+thead,
+th,
+tbody,
+tr,
+td {
+  margin-left: 300px;
+  margin-right: 300px;
+  border: 2px solid rgb(0, 0, 0);
+}
+
+.environment table {
+  margin-left: 300px;
+  margin-right: 300px;
+  border: 2px solid rgb(0, 0, 0);
+  width: 505px;
+  height: 300px;
+  margin-top: 20px;
+  display: inline-block;
+  overflow: auto;
+}
+
+.environment img {
+  width: 30px;
+  height: 30px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+/* настройка стиля через атрибут*/
+.source {
+  /* Убираю маркеры у списка*/
+  list-style: circle;
+  margin-left: 300px;
+  margin-right: 300px;
+}
+.subsource {
+  /* Убираю маркеры у списка*/
+  list-style: none;
+  /* Делаю элементы блочными. */
+  display: block;
+  /* Убираю отступы. */
+
+  /* Убираю еще отступы! */
+  padding: 1px;
+}
+.subsource {
+  position: absolute;
+  width: 400px;
+  top: 150px;
+  left: 470px;
+  /* Делаю субменю скрытыми. */
+  display: none;
+  background-color: #dcdcdc;
+  border: 2px solid rgb(0, 0, 0);
+}
+.source li:hover .subsource {
+  /* Задаю цвет при наведении. */
+  background-color: #dcdcdc;
+  display: block;
+  border: 2px solid rgb(0, 0, 0);
+}

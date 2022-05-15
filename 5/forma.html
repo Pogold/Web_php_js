@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Zvuko-обработка</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <h1>Анкета пользователя</h1>
+    <hr />
+    <form enctype = "multipart/form-data" method="POST" action="./cgi-bin/tutor5.py">
+      <h3>Заполните форму и нажмите кнопку</h3>
+      <p></p>
+      <table>
+        <tr>
+          <th align="right">Имя:</th>
+          <td>
+            <input type="text" name="name" />
+            <tr>
+              <th align="right">Опыт работы:</th>
+              <td>
+                <table>
+                  <td>
+                    <input
+                      type="radio"
+                      name="experience"
+                      value="До года"
+                    />До года
+                  </td>
+                  <td>
+                    <input
+                      type="radio"
+                      name="experience"
+                      value="От 2 до 3 лет"
+                    />От 2 до 3 лет
+                  </td>
+                  <td>
+                    <input
+                      type="radio"
+                      name="experience"
+                      value="Более 5 лет"
+                    />Более 5 лет
+                  </td>
+                </table>
+
+                <tr>
+                  <th align="right">Должность:</th>
+                  <td>
+                    <select name="job">
+                      <option>Диджей</option>
+                      <option>Звукоператор</option>
+                      <option>Битмейкер</option>
+                      <option>Настройщик инструментов</option>
+                    </select>
+
+                    <tr>
+                      <th align="right">Любимая программа для создания музыки:</th>
+                      <td>
+                        <table>
+                          <td>
+                            <input
+                              type="checkbox"
+                              name="program"
+                              value="FL Studio"
+                            />FL Studio
+                          </td>
+                          <td>
+                            <input type="checkbox" name="program" value="Cubase" />Cubase
+                          </td>
+                          <td>
+                            <input
+                              type="checkbox"
+                              name="program"
+                              value="Reaper"
+                            />Reaper
+                          </td>
+                        </table>
+                        <tr>
+                          <th align="right">Ваша фотография:</th>
+                          <td>
+                            <input name="filename" type="file">
+                            <tr>
+                            </td>
+                        <tr>
+                          <th align="right">Комментарий:</th>
+                          <td>
+                            <textarea name="comment" cols="30" rows="2"></textarea>
+                            <tr>
+                              <td colspan="2" align="center">
+                                <input type="submit" value="ОТПРАВИТЬ" />
+                              </td>
+                            </tr>
+                          </td>
+                        </tr>
+                      </td>
+                    </tr>
+                  </td>
+                </tr>
+              </td>
+            </tr>
+          </td>
+        </tr>
+      </table>
+    </form>
+    <hr />
+    <div id="foot"> <footer>Site made by Andrew Pogoldin</footer></div>
+  </body>
+</html>
